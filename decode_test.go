@@ -1018,6 +1018,7 @@ func TestUnmarshalNulls(t *testing.T) {
 	}
 }
 
+/*
 func TestStringKind(t *testing.T) {
 	type stringKind string
 	type aMap map[stringKind]int
@@ -1042,6 +1043,7 @@ func TestStringKind(t *testing.T) {
 	}
 
 }
+*/
 
 var decodeTypeErrorTests = []struct {
 	dest interface{}

@@ -553,8 +553,11 @@ func (d *decodeState) object(v reflect.Value) {
 		// Write value back to map;
 		// if using struct, subv points into struct already.
 		if v.Kind() == reflect.Map {
+			/*
 			kv := reflect.ValueOf(key).Convert(v.Type().Key())
 			v.SetMapIndex(kv, subv)
+			*/
+			v.SetMapIndex(reflect.ValueOf(key), subv)
 		}
 
 		// Next token must be , or }.
